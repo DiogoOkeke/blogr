@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* Header */
+
+header {
+  /* background-color: orangered; */
+  /* border-radius: 0 0 0 5rem; */
+  background-image: url("images/bg-pattern-intro-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  padding: 3rem 1rem 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.02rem;
+}
+
+nav a:hover,
+a.contact-link:hover {
+  color: black;
+  transform: scale(0.7);
+}
+
+nav > div.navTwo {
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+div.navTwo > div.links {
+  margin-left: 2.5rem;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+div.dropdown > div.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0.5rem 1rem 1rem black;
+  opacity: 0;
+  background-color: black;
+  border-radius: 0.4rem;
+  position: absolute;
+}
+
+a.contact-link:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+}
+
+div.dropdown-menu > a {
+  color: grey;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+div.dropdown-menu a:hover,
+div.dropdown-menu a:focus {
+  color: black;
+  transform: scale(0.7);
+}
+
+div.navThree {
+  margin-left: 3.5rem;
+  margin-top: -0.7rem;
+}
+
+div.navThree > button {
+  margin-left: 1rem;
+  background-color: white;
+  color: orangered;
+  border-radius: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* hero section */
+
+section#heroSection {
+  text-align: center;
+  padding: 5rem 6rem;
+  letter-spacing: 0.05rem;
+  line-height: 3rem;
+}
+
+section#heroSection p {
+  font-size: 0.85rem;
+}
+
+section#heroSection button {
+  outline: none;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-top: 0.7rem;
+}
+
+button.heroButtonOne {
+  background-color: white;
+  color: hsl(355, 100%, 74%);
+  margin-right: 0.8rem;
+  border: none;
+}
+
+button.heroButtonTwo {
+  border: 0.8px solid hsl(207, 13%, 34%);
+  background-color: transparent;
+  color: hsl(207, 13%, 34%);
+}
+
+/* section two */
+
+section#sectionTwo {
+  padding: 4rem 0 4rem 3.5rem;
+  line-height: 1.5rem;
+}
+
+section#sectionTwo > p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: hsl(208, 49%, 24%);
+  letter-spacing: 0.12rem;
+}
+
+section#sectionTwo > div {
+  margin-top: 2rem;
+}
+
+section#sectionTwo > div {
+  margin-top: 2.5rem;
+  display: flex;
+}
+
+section#sectionTwo p.header {
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsl(208, 49%, 24%);
+  letter-spacing: 0.12rem;
+  margin-top: 1rem;
+}
+
+section#sectionTwo p.content {
+  font-size: 0.8rem;
+  margin-top: 1.3rem;
+}
+
+.lastDiv {
+  margin-top: 2rem;
+}
+
+section#infrastructure-div {
+  padding: 2.5rem 3.5rem;
+  position: relative;
+  background-color: deeppink;
+  color: white;
+  border-radius: 0 3rem;
+}
+
+div.infrastructure-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.infrastructure-header {
+  font-size: 1.15rem;
+  font-size: bold;
+  margin-bottom: 1.3rem;
+}
+
+p.infrastructure-text {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+section#tooling-div {
+  padding: 5rem 3rem;
+}
+
+div.tooling-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#tooling-div div > p:first-child {
+  font-size: 1.15rem;
+  font-size: bold;
+  margin-bottom: 1.3rem;
+}
+
+section#tooling-div div > p:last-child {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+div.last-div {
+  margin-top: 1.3rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  background-color: black;
+  color: white;
+  border-radius: 0 3rem 0 0;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer div > p:first-child {
+  font-size: 0.8rem;
+  font-size: bold;
+  margin-bottom: 1.3rem;
+}
+
+footer div > a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.6rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
