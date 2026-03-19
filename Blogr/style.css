@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Quintessential&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -15,20 +17,42 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+  font-family: "Overpass", sans-serif;
+}
+
 /* Header */
 
 header {
-  /* background-color: orangered; */
-  /* border-radius: 0 0 0 5rem; */
-  background-image: url("images/bg-pattern-intro-desktop.svg");
+  background-image:
+    linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%)),
+    url("images/bg-pattern-intro-desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 0 0 0 3rem;
+
+  /* fallback for old browsers */
+  /* border-radius: 0 0 0 5rem; */
+  /* background-image: url("images/bg-pattern-intro-desktop.svg");
+  Blogr\images\bg-pattern-intro-desktop.svg
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+
+img[alt="Blogr's logo"] {
+  width: 9vw;
+  margin-left: 2.5rem;
+  margin-top: -0.5rem;
 }
 
 nav {
   display: flex;
-  padding: 3rem 1rem 0 1rem;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 2.6rem 1rem 0 1rem;
 }
 
 nav a {
@@ -39,19 +63,24 @@ nav a {
 
 nav a:hover,
 a.contact-link:hover {
-  color: black;
   transform: scale(0.7);
 }
 
 nav > div.navTwo {
   display: flex;
-  /* justify-content: space-around; */
+  margin-left: -4.5rem;
+  /* justify-content: space-between; */
 }
 
 div.navTwo > div.links {
-  margin-left: 2.5rem;
+  margin-left: 9.5rem;
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-between;
+}
+
+a.company {
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
 }
 
 div.dropdown > div.dropdown-menu {
@@ -61,41 +90,43 @@ div.dropdown > div.dropdown-menu {
   padding: 2rem 2.5rem;
   box-shadow: 0.5rem 1rem 1rem black;
   opacity: 0;
-  background-color: black;
-  border-radius: 0.4rem;
+  background-color: hsl(0, 100%, 100%);
   position: absolute;
 }
 
 a.contact-link:hover + .dropdown-menu,
+a.contact-link:focus + .dropdown-menu,
 .dropdown-menu:hover {
   opacity: 1;
 }
 
 div.dropdown-menu > a {
-  color: grey;
+  color: hsl(353, 100%, 62%);
+  border-radius: 0.4rem;
   text-decoration: none;
-  margin-bottom: 1rem;
+  margin-block: 1rem;
+  letter-spacing: 0.05rem;
   text-align: center;
 }
 
 div.dropdown-menu a:hover,
 div.dropdown-menu a:focus {
-  color: black;
-  transform: scale(0.7);
+  transform: scale(0.9);
 }
 
 div.navThree {
-  margin-left: 3.5rem;
+  margin-left: 10rem;
   margin-top: -0.7rem;
 }
 
 div.navThree > button {
-  margin-left: 1rem;
+  margin-left: 2rem;
   background-color: white;
   color: orangered;
+  border: none;
   border-radius: 2rem;
-  padding: 0.8rem 1.5rem;
-  font-size: 0.7rem;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.65rem;
   font-weight: bold;
 }
 
@@ -103,19 +134,25 @@ div.navThree > button {
 
 section#heroSection {
   text-align: center;
-  padding: 5rem 6rem;
+  padding: 4.35rem 6rem;
   letter-spacing: 0.05rem;
   line-height: 3rem;
 }
 
+section#heroSection h1,
+section#heroSection p {
+  color: white;
+}
+
 section#heroSection p {
   font-size: 0.85rem;
+  margin-block: 0.25rem;
 }
 
 section#heroSection button {
   outline: none;
   border-radius: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   font-size: 0.65rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
@@ -129,29 +166,36 @@ button.heroButtonOne {
   border: none;
 }
 
+button.heroButtonOne:hover,
+button.heroButtonOne:focus {
+  transform: scale(0.7);
+}
+
 button.heroButtonTwo {
-  border: 0.8px solid hsl(207, 13%, 34%);
+  border: 0.8px solid hsl(0, 100%, 100%);
   background-color: transparent;
-  color: hsl(207, 13%, 34%);
+  color: hsl(0, 100%, 100%);
+}
+
+button.heroButtonTwo:hover,
+button.heroButtonTwo:focus {
+  transform: scale(0.7);
 }
 
 /* section two */
 
 section#sectionTwo {
-  padding: 4rem 0 4rem 3.5rem;
+  padding: 4rem 0 4rem 2rem;
   line-height: 1.5rem;
+  position: relative;
 }
 
 section#sectionTwo > p {
-  text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: hsl(208, 49%, 24%);
   letter-spacing: 0.12rem;
-}
-
-section#sectionTwo > div {
-  margin-top: 2rem;
+  text-align: center;
 }
 
 section#sectionTwo > div {
@@ -159,8 +203,15 @@ section#sectionTwo > div {
   display: flex;
 }
 
+section#sectionTwo img {
+  width: 60vw;
+  position: absolute;
+  top: 1.4rem;
+  right: -9.25rem;
+}
+
 section#sectionTwo p.header {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: hsl(208, 49%, 24%);
   letter-spacing: 0.12rem;
@@ -179,9 +230,15 @@ section#sectionTwo p.content {
 section#infrastructure-div {
   padding: 2.5rem 3.5rem;
   position: relative;
-  background-color: deeppink;
+  background-color: hsl(237, 17%, 21%);
   color: white;
   border-radius: 0 3rem;
+}
+
+section#infrastructure-div img {
+  position: absolute;
+  top: -1.65rem;
+  width: 30vw;
 }
 
 div.infrastructure-div {
@@ -196,14 +253,23 @@ p.infrastructure-header {
 }
 
 p.infrastructure-text {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-top: 0.5rem;
   letter-spacing: 0.05rem;
   line-height: 1.5rem;
 }
 
 section#tooling-div {
-  padding: 5rem 3rem;
+  padding: 6.5rem 3rem;
+  position: relative;
+}
+
+section#tooling-div img {
+  width: 60vw;
+  position: absolute;
+  top: 3rem;
+  left: -8.5rem;
+  overflow: hidden;
 }
 
 div.tooling-div {
@@ -211,27 +277,33 @@ div.tooling-div {
   justify-content: space-between;
 }
 
+div.tooling-div > div:last-child {
+  margin-left: 3rem;
+}
+
 section#tooling-div div > p:first-child {
-  font-size: 1.15rem;
-  font-size: bold;
+  font-size: 1rem;
+  letter-spacing: 0.12rem;
+  font-weight: bold;
   margin-bottom: 1.3rem;
+  color: hsl(208, 49%, 24%);
 }
 
 section#tooling-div div > p:last-child {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  margin-top: 1.2rem;
   letter-spacing: 0.05rem;
   line-height: 1.5rem;
 }
 
 div.last-div {
-  margin-top: 1.3rem;
+  margin-top: 2.5rem;
 }
 
 footer {
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem 0;
+  padding: 3rem 0;
   background-color: black;
   color: white;
   border-radius: 0 3rem 0 0;
@@ -242,8 +314,12 @@ footer div {
   flex-direction: column;
 }
 
+footer div:first-child {
+  margin-left: -6.5rem;
+}
+
 footer div > p:first-child {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-size: bold;
   margin-bottom: 1.3rem;
 }
@@ -255,3 +331,9 @@ footer div > a {
   letter-spacing: 0.05rem;
   line-height: 1.5rem;
 }
+
+footer div > a:hover {
+  transform: scale(0.9);
+}
+
+/* media queries */
