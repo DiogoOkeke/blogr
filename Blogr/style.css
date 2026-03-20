@@ -185,7 +185,7 @@ button.heroButtonTwo:focus {
 /* section two */
 
 section#sectionTwo {
-  padding: 4rem 0 4rem 2rem;
+  padding: 5rem 0 4rem 2rem;
   line-height: 1.5rem;
   position: relative;
 }
@@ -337,3 +337,115 @@ footer div > a:hover {
 }
 
 /* media queries */
+/* mobile styles */
+
+@media (max-width: 480px) {
+  /* section two */
+
+  section#sectionTwo {
+    padding-bottom: 14rem;
+  }
+
+  section#sectionTwo > div {
+    flex-direction: column-reverse;
+  }
+
+  section#sectionTwo > p {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+  }
+
+  section#sectionTwo > div {
+    margin-top: 1rem;
+  }
+
+  section#sectionTwo p.header {
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  section#sectionTwo p.content {
+    font-size: 0.9rem;
+    margin-top: 1.3rem;
+    text-align: center;
+  }
+
+  section#sectionTwo img {
+    width: 50vw;
+    position: relative;
+  }
+
+  section#infrastructure-div {
+    position: relative;
+    padding-top: 13rem;
+    padding-bottom: 3rem;
+  }
+
+  div.infrastructure-div,
+  div.tooling-div {
+    flex-direction: column;
+  }
+
+  section#infrastructure-div img {
+    position: absolute;
+    top: -11rem;
+    right: 9rem;
+    width: 60vw;
+  }
+
+  /* div.infrastructure-div {
+  display: flex;
+  justify-content: space-between;
+} */
+
+  p.infrastructure-header {
+    font-size: 1.5rem;
+    font-size: bold;
+    margin-bottom: 1.3rem;
+    text-align: center;
+  }
+
+  p.infrastructure-text {
+    font-size: 0.87rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  section#tooling-div {
+    padding: 1.5rem 0 3rem;
+    position: relative;
+  }
+
+  section#tooling-div img {
+    width: 70vw;
+    margin-bottom: 5.5rem;
+    position: absolute;
+    left: 7.5rem;
+  }
+
+  section#tooling-div div > p:first-child {
+    font-size: 1.8rem;
+    letter-spacing: 0.12rem;
+    font-weight: bold;
+    margin-bottom: 1.3rem;
+    color: hsl(208, 49%, 24%);
+    text-align: center;
+  }
+
+  section#tooling-div div > p:last-child {
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  section#tooling-div img {
+    position: relative;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
