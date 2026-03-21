@@ -340,6 +340,121 @@ footer div > a:hover {
 /* mobile styles */
 
 @media (max-width: 480px) {
+  /* header section */
+
+  nav {
+    padding-top: 4rem;
+  }
+
+  img[alt="Blogr's logo"] {
+    width: 6rem;
+    margin-left: 1.5rem;
+  }
+
+  div.hamburger-menu {
+    margin-top: -0.5rem;
+    margin-left: 24rem;
+  }
+
+  div.hamburger-menu > div {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 100%, 100%);
+    width: 3.5rem;
+    height: 0.6rem;
+    justify-content: space-around;
+    border-radius: 0.3rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  div.first-bar.true {
+    transform: rotate(45deg) translateY(1.7rem);
+    transform-origin: center;
+  }
+
+  div.second-bar.true {
+    transform: translateX(-5rem);
+    opacity: 0;
+    transform-origin: center;
+  }
+
+  div.third-bar.true {
+    transform: rotate(-45deg) translateY(-1.7rem);
+    transform-origin: center;
+  }
+
+  div.hamburger-menu > div:nth-child(2) {
+    margin-block: 0.7rem;
+  }
+
+  nav > div.navTwo.true {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: hsl(0, 100%, 100%);
+    margin-top: 3rem;
+    transition: all 0.4s ease-in-out 0.1s;
+    animation: reveal 0.4s ease-in-out;
+    /* justify-content: space-between; */
+  }
+
+  @keyframes reveal {
+    from {
+      display: flex;
+      transform: translateX(-5rem);
+      transform-origin: center;
+    }
+  }
+
+  nav > div.navTwo > div.links {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.navTwo a {
+    color: black;
+  }
+
+  div.navTwo > div.links {
+    margin-left: 9.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.links img {
+    color: hsl(353, 100%, 62%);
+  }
+
+  div.navThree button {
+    background-color: hsl(353, 100%, 62%);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+  }
+
+  section#heroSection {
+    padding: -2rem 0 2rem 0;
+  }
+
+  section#heroSection h1 {
+    font-size: 2.35rem;
+  }
+
+  section#heroSection p {
+    font-size: 1rem;
+  }
+
+  section#heroSection div {
+    display: flex;
+    margin-left: 5rem;
+  }
+
+  section#heroSection button.heroButtonOne {
+    margin-right: 1.5rem;
+  }
+
   /* section two */
 
   section#sectionTwo {
@@ -375,6 +490,8 @@ footer div > a:hover {
     width: 50vw;
     position: relative;
   }
+
+  /* infrastructure section */
 
   section#infrastructure-div {
     position: relative;
@@ -412,8 +529,10 @@ footer div > a:hover {
     text-align: center;
   }
 
+  /* tooling section */
+
   section#tooling-div {
-    padding: 1.5rem 0 3rem;
+    padding: 1.5rem 0 3rem -5rem;
     position: relative;
   }
 
