@@ -25,10 +25,9 @@ body {
 /* Header */
 
 header {
-  background-color: blue;
-  /* background-image:
+  background-image:
     linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%)),
-    url("images/bg-pattern-intro-desktop.svg"); */
+    url("images/bg-pattern-intro-desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

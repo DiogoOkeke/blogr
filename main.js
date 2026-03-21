@@ -8,12 +8,12 @@ let secondBar = document.querySelector(".second-bar");
 let thirdBar = document.querySelector(".third-bar");
 let navTwo = document.querySelector(".navTwo");
 
-// adding listening event to the hamburger menu
+// adding listening event to the hamburger menu.
 
 hamburgerMenu.addEventListener("click", () => {
   firstBar.classList.toggle("true");
   secondBar.classList.toggle("true");
   thirdBar.classList.toggle("true");
   navTwo.classList.toggle("true");
-  console.log(" hamburger clicked");
+  console.log(" nav clicked");
 });
